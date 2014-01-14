@@ -6,30 +6,29 @@ $(document).ready(function(){
         prefix = $(".prefix"),
         textarea = $("textarea"),
         res = $(".result"),
-        result,
-        text;
+        result;
 
 
-    $(vowel).click(function () {
-            getResult($(textarea), $(res), String.func.getChars, "vowel", true);
+    vowel.click(function () {
+            getResult(textarea, res, St.func.getChars, "vowel", true);
         }
     );
 
-    $(consonant).click(function () {
-            getResult($(textarea), $(res), String.func.getChars, "consonant", true);
+    consonant.click(function () {
+            getResult(textarea, res, St.func.getChars, "consonant", true);
         }
     );
 
-    $(syllable).click(function () {
-            getResult($(textarea), $(res), String.func.getSyllable);
+    syllable.click(function () {
+            getResult(textarea, res, St.func.getSyllable);
         }
     );
-    $(word).click(function () {
-            getResult($(textarea), $(res), String.func.countWord);
+    word.click(function () {
+            getResult(textarea, res, St.func.countWord);
         }
     );
-    $(prefix).click(function () {
-            getResult($(textarea), $(res), String.func.getPrefix);
+    prefix.click(function () {
+            getResult(textarea, res, St.func.getPrefix);
         }
     );
 });
@@ -56,24 +55,23 @@ function remakeString (arr, text) {
 }
 //показать результат
 function getResult(textarea,res,f,ABC,alpha) {
-    console.log(textarea);
     var text,result;
-    text = $(textarea).val();
+    text = textarea.val();
     if (text.length != 0){
-        $(res).stop();
-        $(res).css({opacity:0});
+        res.stop();
+        res.css({opacity:0});
         result = f(text,ABC);
         if (result.length != 0) {
         if (alpha == true) {
             result = remakeString(result,text);
         }
 
-            $(res).html(result);
+            res.html(result);
 
         }
         else {
-            $(res).html("Измените текст");
+            res.html("Измените текст");
         }
-        $(res).animate({opacity:1},1000);
+        res.animate({opacity:1},1000);
     }
 }
