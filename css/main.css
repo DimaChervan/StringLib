@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/body.png);
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.main {
+    margin-top: 3%;
+    text-align: center;
+    border: 2px dashed #BA2020;
+    border-radius: 10px;
+    width: 500px;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #F2E5BD;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    min-height: 265px;
+    font-size: 14px;
+}
+
+textarea {
+    vertical-align: top;
+    border: 1px dashed #BA2020;
+    margin-right: 10px;
+    border-radius: 5px;
+    height:94px;
+    resize: vertical;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #F2E5BD;
+}
+
+textarea:focus {
+    outline:none;
+    border:1px solid #3B3838;
+    color: #3B3838;
+}
+
+.management {
+    width: 100%;
+    padding: 2px;
+    color: #3B3838;
+}
+
+.button {
+    width:150px;
+    background-color: #BA2020;
+    color: #FFFDF7;
+    padding: 2px 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: 1px solid #A0191B;
+    cursor: pointer;
+}
+
+.button:last-child {
+    margin-bottom: 0;
+}
+
+.button:hover {
+    background-color: #D12512;
+    box-shadow: none;
+    padding:1px 4px;
+    border-left-width: 2px;
+    border-top-width: 2px;
+}
+
+.result {
+    min-height: inherit;
+    word-wrap: break-word;
+    opacity: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    color: #3B3838;
+}
+.result span {
+    color : #BA2020;
+    font-size: 16px;
+}
